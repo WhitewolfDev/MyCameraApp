@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private void dispatchTakePictureIntent() {
 
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        // resolveActivity is used to return the first Activity that can handle the intent...
+        // if nothing can handle the intent, a null is returned.  Otherwise, trying to
+        // run the startActivity that no app can handle will crash the program.
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
