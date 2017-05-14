@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Camera App</string>
     <string name="take_a_picture_button_text">Take a Picture</string>
+    <string name="main_activity_header_text">Simple Picture App</string>
 </resources>
